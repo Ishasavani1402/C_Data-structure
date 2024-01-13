@@ -75,24 +75,3 @@ int main()
     free(root);
     return 0;
 }
-
-// struct tree *root = (struct tree *)malloc(sizeof(struct tree));
-// printf("Enter the root value: ");
-// scanf("%d", &root->info);
-// root->left = NULL;
-// root->right = NULL;
-
-// struct tree *leftnode = (struct tree *)malloc(sizeof(struct tree));
-// printf("\nEnter the left subtree's value: ");
-// scanf("%d", &leftnode->info);
-// leftnode->left = NULL;
-// leftnode->right = NULL;
-
-// struct tree *rightnode = (struct tree *)malloc(sizeof(struct tree));
-// printf("Enter the right subtree's value: ");
-// scanf("%d",&rightnode->info);
-// rightnode->left = NULL;
-// rightnode->right = NULL;
-
-// root->left = leftnode;
-// root->right = rightnode;
