@@ -158,4 +158,5 @@ int main()
     first = deletelast(first);
     printf("\n after last element delete");
     displaylist(first);
+    return 0;
 }
