@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int liniarsearch(int arr[], int size, int seach)
+{
+    int i;
+    for (i = 0; i < size; i++)
+    {
+        if (arr[i] == seach)
+        {
+            printf("\n %d present of location %d", seach, i + 1);
+            break;
+        }
+    }
+    if (i == size)
+    {
+        printf("\n not found");
+    }
+}
+
+int main()
+{
+    int arr[] = {10,20,5,4,3,30,40};
+    int size, seach, i;
+    size = sizeof(arr) / sizeof(int); // find array of size
+
+    for (i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n enter element for search");
+    scanf("%d", &seach);
+    // liniar search
+    liniarsearch(arr, size, seach);
+    return 0;
+}
