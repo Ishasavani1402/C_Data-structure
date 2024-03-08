@@ -1,5 +1,5 @@
 #include <stdio.h>
-int binarysearch(int arr[], int size, int seach)
+int binarysearch(int arr[], int size, int search)
 {
     int low, mid, hight;
     low = 0;
@@ -8,15 +8,15 @@ int binarysearch(int arr[], int size, int seach)
     while (low <= hight)
     {
         mid = (low + hight) / 2;
-        if (arr[mid] == seach)
+        if (arr[mid] == search)
         {
             return mid;
         }
-        else if (arr[mid] < seach)
+        else if (arr[mid] < search)
         {
             low = mid + 1;
         }
-        else if (arr[mid] > seach)
+        else if (arr[mid] > search)
         {
             hight = mid - 1;
         }
@@ -27,7 +27,7 @@ int binarysearch(int arr[], int size, int seach)
 int main()
 {
     int arr[] = {100,200,300,400,5000,6000};
-    int size, seach, i;
+    int size, search, i;
     size = sizeof(arr) / sizeof(int); // find array of size
 
     for (i = 0; i < size; i++)
@@ -35,10 +35,18 @@ int main()
         printf("%d ", arr[i]);
     }
     printf("\n enter element for search");
-    scanf("%d", &seach);
+    scanf("%d", &search);
     
     // binary search
-    int b = binarysearch(arr,size,seach);
-    printf("\n Element %d is at index %d", seach,b);
+    int b = binarysearch(arr,size,search);
+
+    if (b != -1)
+    {
+        printf("\n Element %d is at index %d", search, b);
+    }
+    else
+    {
+        printf("\n %d is not found", search);
+    }
     return 0;
 }
